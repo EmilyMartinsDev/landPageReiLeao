@@ -1,0 +1,42 @@
+@use 'variables';
+@use 'hero';
+@use 'button';
+@use 'header';
+@use 'datail';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: variables.$colorPrimary;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+
+    @media(max-width: 1024px){
+        max-width: 90%;
+    }   
+    @media(max-width: 678px){
+        max-width: 80%;
+    } 
+}
+
+.text{
+    font-size: 20px;
+    letter-spacing: -.1px;
+    line-height: 1.6;
+}
+.text--small{
+    font-size: 12px;
+    letter-spacing: -.1px;
+    line-height: 1.5;
+}
+.title{
+    font-size: 24px;
+    letter-spacing: .11px;
+    line-height: 1.2;
+}

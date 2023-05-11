@@ -1,0 +1,30 @@
+@use 'variables';
+
+.datail{
+    padding-top: 40px;
+    background-color: variables.$datailBackgrounf ;
+    &__description{
+        padding-top: 10px;
+        margin: 0 24px 24px 0;
+        
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2%;
+        align-items: baseline;
+    }
+    &__col{
+        padding-top: 10px;
+      
+    }
+    &__infos{
+        &__text{
+            strong{
+                display: block;
+                padding-top: 5px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

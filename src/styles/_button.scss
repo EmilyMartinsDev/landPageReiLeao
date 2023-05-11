@@ -1,0 +1,36 @@
+@use 'variables';
+
+.button{
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    outline: none;
+    border-radius: 0.25rem;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    &--primary{
+        background-color: variables.$btnPrimary ;
+        border: 0;
+        margin: 4px 8px;
+        padding: 0px 20px;
+        height: 40px;
+        @media(max-width: 648px){
+            margin: 4px 0;
+        }
+    }
+    &--secondary{
+        background-color: variables.$btnSecondary;
+        padding: 0 16px;
+        height: 40px;
+    }
+
+    @media(max-width: 648px){
+        width: 100%;
+    }
+
+   
+}
