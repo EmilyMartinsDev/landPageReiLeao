@@ -3,12 +3,16 @@
 @use 'button';
 @use 'header';
 @use 'datail';
+@use 'footer';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: variables.$colorPrimary;
     font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
 .container{

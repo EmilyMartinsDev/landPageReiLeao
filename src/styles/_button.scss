@@ -12,6 +12,8 @@
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
+    border: 1px solid #fff;
+    transition: all 0.5s;
     &--primary{
         background-color: variables.$btnPrimary ;
         border: 0;
@@ -21,11 +23,22 @@
         @media(max-width: 648px){
             margin: 4px 0;
         }
+        &:hover{
+            background-color: lighten(variables.$btnPrimary, 8%);
+            
+          
+        }
     }
     &--secondary{
         background-color: variables.$btnSecondary;
         padding: 0 16px;
         height: 40px;
+       
+        &:hover{
+            background-color: variables.$colorPrimary;
+            color: #000;
+          
+        }
     }
 
     @media(max-width: 648px){

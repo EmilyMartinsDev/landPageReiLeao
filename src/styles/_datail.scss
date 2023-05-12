@@ -3,28 +3,58 @@
 .datail{
     padding-top: 40px;
     background-color: variables.$datailBackgrounf ;
+    width: 100%;
     &__description{
         padding-top: 10px;
         margin: 0 24px 24px 0;
+    &__title{
+        margin-bottom: 16px;
+        text-align: center;
+    }
         
     }
     .container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2%;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 5%;
         align-items: baseline;
+        @media(max-width: 1024px){
+            display: block;
+        }
     }
     &__col{
         padding-top: 10px;
+        @media(max-width: 1024px){
+            display: grid;
+            align-items: baseline;
+            gap: 5%;
+            grid-template-columns: 1fr 1fr 1fr ;
+    }
+  
+      
       
     }
-    &__infos{
+    &__infos{    
+    
         &__text{
             strong{
                 display: block;
                 padding-top: 5px;
                 padding-bottom: 10px;
+
+                @media(max-width: 1024px){
+                
+                padding-top: 0;
+                    
+                }
+            }
+            }
+
+            @media(max-width: 1024px){
+                
+                font-size: 14px;
+                
             }
         }
+     
     }
-}

@@ -1,0 +1,39 @@
+@use 'variables';
+.footer{
+    padding: 10px 20px;
+    background-color: variables.$footerBackground;
+    .container{
+        @media(max-width: 1024px){
+            max-width: 90%;
+        }
+    }
+    &__logo{
+        margin-bottom: 40px;
+        width: 100%;
+        display: block;
+        height: 56px;
+        
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+       gap: 5%;
+        @media(max-width: 1024px){
+            grid-template-columns: 1fr 1fr;
+            font-size: 14px;
+
+        }
+        @media(max-width: 648px){
+            grid-template-columns: 1fr ;
+            font-size: 14px;
+
+        }
+        &__item{
+            display: flex;
+            justify-content: center;
+            white-space: nowrap;
+            margin-bottom: 20px;
+            padding-right: 5px;
+        }
+    }
+}
