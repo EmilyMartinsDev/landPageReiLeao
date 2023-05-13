@@ -1,18 +1,34 @@
 
     const hero = document.querySelector('.hero');
     const header = document.querySelector('.header');
+    const btn = document.querySelector('.dropdown-toggle')
 
-    const heightClient = hero.clientHeight;
-    console.log(heightClient)
-    window.addEventListener('scroll', function(){
-        const position = window.scrollY;
-        console.log(position )
-        if(position > heightClient){
-           header.classList.add('header--is-hidden')
+    btn.addEventListener('click', (e)=>{
+       
+       const  pai = btn.parentNode;
+       pai.classList.toggle('dropdown--active')
+
+        
+        if(header.classList.contains('header--is-large')){
+            header.classList.remove('header--is-large')
         }else{
-            header.classList.remove('header--is-hidden')
+            header.classList.add('header--is-large')
         }
-
 
     });
 
+    const height = hero.clientHeight;
+    window.addEventListener('scroll', ()=>{
+        const position = window.scrollY;
+        if(position > height){
+        
+            header.classList.add('header--is-visible')
+        }
+
+        if(position < height){
+        
+            header.classList.remove('header--is-visible')
+        }
+       
+        
+    })

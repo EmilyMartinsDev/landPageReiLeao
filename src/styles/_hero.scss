@@ -1,9 +1,10 @@
 .hero {
     max-height: 900px;
     width: 100vw;
-    background-image: url('../../dist/images/thumb-1920-474234.jpg');
+    background-image: url('../../dist/images/reileião__0.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top  left 50% ;
     position: relative;
   
 
@@ -24,7 +25,12 @@
     &__images {
         display: block;
         width: 100%;
-        max-width: 340px;
+        max-width: 320px;
+        padding-top: 40px;
+        @media(max-width: 1024px){
+            padding-top: 100px;
+            max-width: 60%;
+         }
     }
 
     &__metadata {
@@ -50,7 +56,6 @@
             padding: 8px;
         }
     }
-
     &__links {
         margin-top: 32px;
     }

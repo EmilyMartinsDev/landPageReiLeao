@@ -1,31 +1,111 @@
 @use 'variables';
+
+@mixin button{
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    outline: none;
+    background-color: #eb9e5a;
+    border-radius: 0.25rem;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    
+}
 .header{
+
+    visibility: hidden;
     z-index: 1;
     width: 100%;
     position:fixed;
     padding-top: 8px;
-    height: 64px;
+    white-space: nowrap;
+    height: 56px;
     background-color: variables.$headerBackground ;
     transition: all 0.2s;
-   &--is-hidden{
-    background-color: transparent;
-        .header__brand, .button:first-child{
-            visibility: hidden;   
-            transition: all 0.2s;        
+ @media (max-width: 768px){
+    &--is-large{
+        height: 104px;
+       .dropdown{
+        .list{
+            margin: 60px 0 0 20px;
+            li{
+                display: inline;
+            }
+        }
+       }
     }
-    }
+ }
     &__brand{
         display: block;
         width: 79px;
         cursor: pointer;
-     
+        
     }
 
+    .dropdown {
+        display: block;
+        .list{
+            display: flex;
+            li{
+                    margin-left: 15px;
+            }
+        }
+        @media(max-width: 768px){
+            .list{
+                display: none;
+            }
+            
+        }
+        &--active{                
+            .list{
+                position: absolute;
+                display: block;
+                bottom: -200%;
+                top: 10%;
+                right: 20%;
+            }
+        
+        }
 
+        .dropdown-toggle{
+            display: none;
+            img{
+                height: 20px;
+                width: 20px;
+            }
+            @media(max-width: 768px){
+                display: block;
+            }
+        }
+      
+     
+
+    }
 
     .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
+            @media (max-width: 1024px){
+                max-width: 90%;
+            }
+            @media(max-width: 648px ){
+                max-width: 80%;
+            }
+        
     }
-}
+
+    &--is-visible{
+      visibility: visible;
+     }
+
+
+    
+    }
